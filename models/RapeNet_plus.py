@@ -70,14 +70,12 @@ class rapenet(nn.Module):
         super(rapenet, self).__init__()
         self.layer1 = nn.Sequential(
             get_pyconv(3, 16, [3], 1, [1]),
-            # nn.Conv2d(3, 16, 3, padding=1, bias=False),
             nn.BatchNorm2d(16),
             nn.ReLU(inplace=True),
             nn.MaxPool2d((2, 2), stride=2)
         )
         self.layer2 = nn.Sequential(
             get_pyconv(16, 32, [3, 5], 1, [1, 4]),
-            # nn.Conv2d(16, 32, 3, padding=1, bias=False),
             nn.BatchNorm2d(32),
             nn.ReLU(inplace=True),
             nn.MaxPool2d((2, 2), stride=2)
@@ -87,7 +85,6 @@ class rapenet(nn.Module):
         self.BN2 = nn.BatchNorm2d(128)
         self.layer3 = nn.Sequential(
             get_pyconv(32, 64, [3, 5, 7, 9], 1, [1, 4, 8, 16]),
-            # nn.Conv2d(32, 64, 3, padding=1, bias=False),
             nn.BatchNorm2d(64),
             nn.ReLU(inplace=True),
             nn.MaxPool2d((2, 2), stride=2)
@@ -97,19 +94,16 @@ class rapenet(nn.Module):
         self.BN3 = nn.BatchNorm2d(256)
         self.layer4 = nn.Sequential(
             get_pyconv(64, 128, [3, 5, 7], 1, [1, 4, 8]),
-            # nn.Conv2d(64, 128, 3, padding=1, bias=False),
             nn.BatchNorm2d(128),
             nn.ReLU(inplace=True)
         )
         self.layer5 = nn.Sequential(
             get_pyconv(128, 256, [3, 5], 1, [1, 4]),
-            # nn.Conv2d(128, 256, 3, padding=1, bias=False),
             nn.BatchNorm2d(256),
             nn.ReLU(inplace=True)
         )
         self.layer6 = nn.Sequential(
             get_pyconv(256, 256, [3], 1, [1]),
-            # nn.Conv2d(256, 256, 3, padding=1, bias=False),
             nn.BatchNorm2d(256),
             nn.ReLU(inplace=True)
         )
@@ -123,25 +117,18 @@ class rapenet(nn.Module):
         x = self.layer1(x)
         x = self.layer2(x)
         ca2 = self.ca2(x)
-        # print(ca2.size())
         ca2 = self.conv2(ca2)
         ca2 = F.max_pool2d(ca2, kernel_size=2, stride=2)
         ca2 = self.BN2(ca2)
-        # ca2 = F.interpolate(ca2, scale_factor = 2, mode = 'bilinear', align_corners = False)
-        # print(ca2.size())
         x = self.layer3(x)
         ca3 = self.ca3(x)
-        # print(ca2.size())
         ca3 = self.conv3(ca3)
-        # ca3 = F.max_pool2d(ca3, kernel_size=2, stride=2)
         ca3 = self.BN3(ca3)
         x = self.layer4(x)
-        # print(x.size())
         x = x.clone() + ca2
         x = self.layer5(x)
         x = x.clone() + ca3
         x = self.layer6(x)
-        # print(x.size)
         x = self.reg_layer(x)
         return torch.abs(x)
 
