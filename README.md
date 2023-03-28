@@ -36,7 +36,6 @@ Due to large sizes of images in RFRB and RFCP datasets, we preprocess these two 
 ```
 python preprocess_RFRB.py
 python preprocess_RFCP.py
-
 ```
 
 3. Training
