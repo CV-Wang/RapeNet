@@ -1,5 +1,5 @@
 # RapeNet
-Crop detection and counting research
+Crop counting research
 
 Official Pytorch implementation of the paper Automatic rape flower cluster counting method based on low-cost labelling and UAV-RGB images
  (Plant Methods).
