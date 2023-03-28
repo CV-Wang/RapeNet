@@ -12,8 +12,8 @@ The prediction results of RapeNet network are as follows：
 ![](https://github.com/CV-Wang/RapeNet/blob/main/pred/RapeNet/YT4.png)
 
 The prediction results of RapeNet+ network are as follows：
-![](https://github.com/CV-Wang/RapeNet+/blob/main/pred/RapeNet/202103136307.png)
-![](https://github.com/CV-Wang/RapeNet+/blob/main/pred/RapeNet/YT4.png)
+![](https://github.com/CV-Wang/RapeNet/blob/main/pred/RapeNet%2B/202103136307.png)
+![](https://github.com/CV-Wang/RapeNet/blob/main/pred/RapeNet%2B/YT4.png)
 
 
 ## Prerequisites
