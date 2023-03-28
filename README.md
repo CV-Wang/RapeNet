@@ -42,7 +42,8 @@ python train.py --dataset <dataset name: rape> --data-dir <path to dataset> --de
 4. Test
 
 ```
-python test.py --model-path <path of the model to be evaluated> --data-path <directory for the dataset> --dataset <dataset name: rape>
+python test_RFRB.py --model-path <path of the model to be evaluated> --data-path <directory for the dataset> --dataset <dataset name: rape>
+python test_RFCP.py --model-path <path of the model to be evaluated> --data-path <directory for the dataset> --dataset <dataset name: rape>
 ```
 
 ## Pretrained models
