@@ -25,9 +25,9 @@ For other libraries, check requirements.txt.
 ## Getting Started
 1. Dataset download
 
-+ RFRB can be downloaded [Google Drive](https://drive.google.com/drive/folders/1HukeRMCmzVWI5uuoymTJ06_jGCXGNxp9?usp=share_link)
++ RFRB can be downloaded [Google Drive](https://drive.google.com/drive/folders/165Ds7MKyaETOyDw1ilOCwYeGhGQgHTuc?usp=share_link)
 
-+ RFCP can be downloaded [Google Drive](https://drive.google.com/drive/folders/165Ds7MKyaETOyDw1ilOCwYeGhGQgHTuc?usp=share_link)
++ RFCP can be downloaded [Google Drive](https://drive.google.com/drive/folders/1HukeRMCmzVWI5uuoymTJ06_jGCXGNxp9?usp=share_link)
 
 2. Data preprocess
 
