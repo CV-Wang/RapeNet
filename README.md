@@ -54,3 +54,11 @@ python test_RFCP.py --model-path <path of the model to be evaluated> --data-path
 ## Pretrained models
 
 Pretrained models on RFRB, RFCP can be found [Google Drive](https://drive.google.com/drive/folders/1wz9c4wUQB7-wtd4W3mNPsC6dAyHBcFlc?usp=share_link). You could download them and put them in ckpt folder.
+
+## References
+
+If you find the RapeNet&RapeNet+ useful, please cite our paper. Thank you!
+
+```
+Li, J., Wang, E., Qiao, J. et al. Automatic rape flower cluster counting method based on low-cost labelling and UAV-RGB images. Plant Methods 19, 40 (2023). https://doi.org/10.1186/s13007-023-01017-x
+```
